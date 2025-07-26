@@ -58,8 +58,6 @@ def process_documents(uploaded_files):
             st.error(f"❌ Error creating directory docs: {str(e)}")
             return None
     
-    # Debug: Log directory contents
-    st.write(f"DEBUG: Before processing - ./data-old contents: {os.listdir('./data-old') if os.path.exists('./data-old') else 'Does not exist'}")
     
     # Clear existing files in docs folder
     for file in os.listdir("docs"):
